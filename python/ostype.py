@@ -9,4 +9,4 @@ so i present to you, THIS. GNU{punctuation}Linux
 I added this script to my neofetch config to make it show the output as OS 
 """
 
-print(random.choice(string.punctuation).join(['GNU','Linux']))
+print(random.choice(string.punctuation).join(('GNU','Linux')))

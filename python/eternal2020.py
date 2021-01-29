@@ -9,7 +9,7 @@ yes, this script can be imported and used.
 yes, this script is unnecessary.
 """
 
-months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
 def get_name(n:int) -> str:
     # this function really is a base 12 converter, nothing all that fancy
