@@ -1,9 +1,15 @@
+#!/bin/bash
 # this one really just generates a line for fstab
 # i got annoyed and made this script
 
 if [[ ! -z $1 ]] && [[ ! -z $2 ]]; then
     drive_data=$(blkid $1 | awk '{for(i=1;i<=NF;i++){ if($i ~ /\<TYPE/ || $i ~ /^UUID=.*/){sub(//,""); printf $i" "} } print ""};')
 
+    if [[ -z $drive_data ]]; then
+        echo "cannot generate fstab entry for device"
+        exit 0
+    fi 
+    
     if [[ ! -z $3 ]]; then
         options=$3
     else
