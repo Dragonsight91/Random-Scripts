@@ -22,4 +22,9 @@ elif [[ "$MODE" == "rate" ]]; then
     fi
     echo "${MODE^^} MODE"
     notify-send --icon="$ICONPATH/${MODE}_icon.png" "${MODE^^} MODE" "Main Screen running at ${ATTR}Hz"
+else
+    echo "notify-screen by Dragonsight91"
+    echo "usage:"
+    echo "  notify-screen [on|off]"
+    echo "  notify-screen rate [144|*]"
 fi
